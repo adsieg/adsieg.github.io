@@ -1,14 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hello World </title>
+  <title>Data Portfolio</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 
-</head>
-<body>
+<link href='https://fonts.googleapis.com/css?family=Muli:300|Raleway:300,700' rel='stylesheet' type='text/css'>
   
-  <input type="button" onclick="location.href='part_1.html';" value="Go to Google" />
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <header class="header container-fluid">
+  <div class="nav-toggle-wrapper">
+    <button class="nav-toggle-btn">
+					      <span class="line"></span>
+      					<span class="line"></span>
+					      <span class="line"></span>
+				    </button>
+  </div>
+  <nav class="header__nav">
+    <ul class="nav">
+      <li class="header__nav__item"><a href="#about" data-ref="about">about</a></li>
+      <li class="header__nav__item"><a href="#portfolio" data-ref="portfolio">work</a></li>
+    </ul>
+  </nav>
+  <ul class="header__social-btns">
+    <li>
+      <a class="fa fa-facebook" href="https://www.facebook.com/adrien.sieg.9"></a>
+    </li>
+    <li>
+      <a class="fa fa-github" href="https://github.com/adsieg" target="_blank"></a>
+    </li>
+    <li>
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/adrien-sieg-75307491/" target="_blank"></a>
+    </li>
+  </ul>
+</header>
+
+<main>
+
+  <section id="about" class="main-section">
+    <div class="wrapper">
+      <p class="about__intro">
+        Hi, I'm Adrien, an aspiring Data Scientist with an interest in D3js Visualisation and Graph Network. <br> I'm majoring in Economics and Statistics <br> From Paris, France <br> Cheese Enthusiast, Rock-climber, R-addict <br> Lived in London and Singapore
+      </p>
+      <a href="#portfolio" class="global-button rotated scroll"> See my work </a>
+    </div>
+  </section>
+
+  <section id="portfolio" class="container main-section">
+    <div class="filters row js-dis">
+      <h4 class="filters__title"> <i class="fa fa-tags"></i> </h4>
+      <ul class="filters__list">
+        <li class="filters__label is-active"> All </li>
+        <li class="filters__label" data-cat="fcc"> Statistics </li>
+        <li class="filters__label" data-cat="personal"> Graph-Network </li>
+        <li class="filters__label" data-cat="personal"> Vizualisation </li>
+      </ul>
+    </div>
+
+    <div class="portfolio__project-wrapper row">
+
+      <div class="portfolio__project col-xs-12 col-sm-6 col-lg-4 text-center" data-cat="fcc">
+        <a href="network_work_word_embeddings_part_1.html" target="_blank" title="view live">
+          <div class="portfolio__project__preview">
+            <img src="https://eevu.github.io/img/quotes.svg" alt="random quotes">
+          </div>
+          <div class="portfolio__project__description">
+            <div class="info-wrapper">
+              <h3 class="portfolio__project__name">Network Graph Word Embeddings</h3>
+              <p class="portfolio__project__category">#Graph-Network</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="portfolio__project col-xs-12 col-sm-6 col-lg-4" data-cat="fcc">
+        <a href="#" target="_blank" title="view live">
+          <div class="portfolio__project__preview">
+            <img src="https://eevu.github.io/img/weather.svg" alt="weather app">
+          </div>
+          <div class="portfolio__project__description">
+            <div class="info-wrapper">
+              <h3 class="portfolio__project__name">Weather App</h3>
+              <p class="portfolio__project__category">#Statistics</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="portfolio__project col-xs-12 col-sm-6 col-lg-4" data-cat="fcc">
+        <a href="#" target="_blank" title="view live">
+          <div class="portfolio__project__preview">
+            <img src="https://eevu.github.io/img/wiki.svg" alt="wikipedia viewer">
+          </div>
+          <div class="portfolio__project__description">
+            <div class="info-wrapper">
+              <h3 class="portfolio__project__name">Wikipedia Viewer</h3>
+              <p class="portfolio__project__category">#Statistics</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="portfolio__project col-xs-12 col-sm-6 col-lg-4" data-cat="fcc">
+        <a href="#" title="coming soon">
+          <div class="portfolio__project__preview">
+            <img src="https://eevu.github.io/img/calc.svg" alt="javascript calculator">
+          </div>
+          <div class="portfolio__project__description">
+            <div class="info-wrapper">
+              <h3 class="portfolio__project__name">JavaScript Calculator</h3>
+              <p class="portfolio__project__category"> #Statistics</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="portfolio__project col-xs-12 col-sm-6 col-lg-4" data-cat="personal">
+        <a href="#" title="coming soon">
+          <div class="portfolio__project__preview">
+            <img src="https://eevu.github.io/img/txt.svg" alt="text editor">
+          </div>
+          <div class="portfolio__project__description">
+            <div class="info-wrapper">
+              <h3 class="portfolio__project__name">Text Editor</h3>
+              <p class="portfolio__project__category">#Vizualisation</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="portfolio__project col-xs-12 col-sm-6 col-lg-4" data-cat="personal">
+        <a href="#" title="coming soon">
+          <div class="portfolio__project__preview">
+            <img src="https://eevu.github.io/img/desktop.svg" alt="random placeholder">
+          </div>
+          <div class="portfolio__project__description">
+            <div class="info-wrapper">
+              <h3 class="portfolio__project__name"> Desktop </h3>
+              <p class="portfolio__project__category">#Vizualisation</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+  </section>
+
+</main>
+
+<footer class="container">
+
+  <section id="credit" class="row">
+    <p>
+      Built for <a href="https://www.freecodecamp.com" target="_blank" class="credit-link">Free Code Camp</a> by <a href="https://codepen.io/eevu" target="_blank" class="credit-link">Ivana Cossu</a> &copy;2016
+    </p>
+  </section>
+</footer>
+    <script  src="js/index.js"></script>
+
+
+
+
 </body>
+
 </html>
