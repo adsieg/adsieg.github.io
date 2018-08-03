@@ -1,0 +1,121 @@
+    body { 
+        background-color: white;
+        font-family: 'PT Serif', serif;
+    }
+
+    #container {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+        padding: 1px 10px 10px 10px;
+        background-color: white;
+        box-shadow: 1px 1px 1px 1px #fff;
+    }
+
+    h1 {
+        font-weight: 300;
+        color: darkslategray;
+        font-family: "PT Sans", sans-serif;
+        font-size: 56px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        }
+
+    h2 {
+        font-weight: 300;
+        color: darkslategray;
+        font-family: "PT Sans", sans-serif;
+        font-size: 32px;
+        margin-bottom: 20px;
+        margin-top: -10px;
+        }
+
+    p {
+        font-size: 18px;
+        margin-top: 4px;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    a {
+        color: darkslategray;
+    }
+
+    a:hover {
+        color: darkslategray;
+    }
+
+    .footer {
+        font-size: 14px;
+        margin-top: 0px;
+    }
+
+    #outercontroler{
+        float: left;
+        display: table;
+        width: 136px;
+        height: 500px;
+
+    }
+
+    #controler {
+        display: table-cell;
+        vertical-align: middle;
+        background-color: whitesmoke;
+        font-family: "PT Sans", sans-serif;
+        border: 1px solid gray;
+        border-radius: 6px;
+        padding: 6px;
+    }
+
+    #svganchor {
+        margin: auto;
+    }
+
+    .criterionList {
+        font-size: 12px;
+        color: #222;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .chartTitle {
+        font-family: "PT Sans", sans-serif;
+        font-weight: 700;
+        font-size: 22px;
+        color: #444;
+    }
+
+    .chartSubTitle {
+        font-family: "PT Sans", sans-serif;
+        font-size: 18px;
+        color: #444;
+    }
+
+    .nodesData {
+        font-family: 'PT Serif', serif;
+        font-size: 14px;
+    }
+
+    .nodesDataSpan {
+        font-family: 'PT Serif', serif;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .preciseNumberTitle {
+        font-family: "PT Sans", sans-serif;
+        font-size: 12px;
+        color: #444;
+    }
+
+    .nodesDataPrecise {
+        font-family: 'PT Serif', serif;
+        font-size: 12px;
+        color: #444;
+    }
+
+    svg {
+        background-color: white;
+    }
