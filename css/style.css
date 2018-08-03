@@ -704,3 +704,45 @@ footer > #credit {
 .credit-link:hover {
   color: #51e6a6;
 }
+
+.globe {
+  border: 2px solid #8bc34a;
+  border-radius: 50%;
+  height: 140px;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-300%, -25%);
+          transform: translate(-300%, -25%);
+  width: 140px;
+}
+.globe svg {
+  -webkit-animation: rotation 5s linear 0s infinite;
+          animation: rotation 5s linear 0s infinite;
+}
+.globe svg path {
+  stroke: #8BC34A;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  from {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  from {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
