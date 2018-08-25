@@ -213,3 +213,24 @@ function initMap() {
   map.setMapTypeId(customMapTypeId);
 
 }
+
+var hiddenDiv = document.getElementById("hide");
+
+var bell = document.getElementById("Concierge");
+var email = document.getElementById("hiddenEmail");
+var bellbutton = document.getElementById("bellButton");
+var bellbody = document.getElementById("bellBody");
+var sound = document.getElementById("soundEffect");
+
+var all=[email,bellbutton,bellbody,sound];
+//remove the hidden and then add it back in...
+
+function activate(){
+  console.log("working");
+  //get all the stuff, and add active to everything
+  all.forEach(function(entry){
+    entry.classList.toggle("active");
+    
+  });
+  
+}

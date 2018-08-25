@@ -1,0 +1,34 @@
+► Title - 
+	Check for update task
+▬ Message - 
+	The underlying connection was closed: An unexpected error occurred on a send.
+○ Type - 
+	System.Net.WebException
+♦ [Version] Date/Hour - 
+	[2.13.3] 07/30/2018 09:20:39
+▲ Source - 
+	System
+▼ TargetSite - 
+	System.Net.WebResponse EndGetResponse(System.IAsyncResult)
+♠ StackTrace - 
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ScreenToGif.Windows.Editor.<UpdateTask>d__365.MoveNext()
+
+▬▬ Message - 
+	Authentication failed because the remote party has closed the transport stream.
+○○ Type - 
+	System.IO.IOException
+▲▲ Source - 
+	System
+▼▼ TargetSite - 
+	Void EndWrite(System.IAsyncResult)
+♠♠ StackTrace - 
+   at System.Net.TlsStream.EndWrite(IAsyncResult asyncResult)
+   at System.Net.ConnectStream.WriteHeadersCallback(IAsyncResult ar)
+
+----------------------------------
+
