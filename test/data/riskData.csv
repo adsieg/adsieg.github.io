@@ -1,0 +1,35 @@
+risk,label,category,likelihood2016,severity2016,likelihood2015,severity2015,likelihood2017,severity2017
+Aging workforce,Aging workforce,Operational,2.31,2.04,2.26,2.02,2.85,1.98
+Attracting and retaining talented workforce,Workforce,Operational,2.91,2.79,2.67,2.62,3.3,2.72
+Availability of credit,Credit,Financial,1.96,2.74,1.92,2.38,2.23,2.45
+Climate change,Climate,Environmental,2.11,2.21,1.88,2.17,2.34,2.26
+Contractual risk,Contractual risk,Financial,2.74,2.98,2.60,3.00,3.02,2.74
+Currency/FX risk,FX,Financial,2.33,2.38,2.53,2.50,2.77,2.26
+Damage to company reputation/brand,Reputation,Business and strategic,2.47,3.54,2.38,3.26,2.81,3.36
+Economic conditions,Economic,Socioeconomic,3.09,3.23,3.34,2.95,3.36,3.13
+Environmental risk,Environment,Environmental,2.06,2.40,1.95,2.20,2.43,2.57
+Executive/directors liability,D&O,Governance,1.87,2.24,1.88,2.59,2.06,2.66
+Failure of critical IT systems,Systems failure,Technology,2.49,3.13,2.45,3.07,2.6,3.23
+Failure to innovate,Innovation ,Business and strategic,2.85,3.35,2.50,2.81,3.02,3.28
+"Fire 	or damage to propery",Fire,Operational,2.11,2.91,2.19,2.62,2.45,2.68
+Fraud and corruption,Fraud,Governance,2.32,2.45,2.14,2.38,2.66,2.47
+Increased competition,Competition,Business and strategic,3.09,3.27,2.72,2.86,3.43,3.11
+Injury to workers,Worker injury,Operational,2.30,2.81,2.50,2.86,2.87,2.49
+Interest rate risk,IR risk,Financial,2.06,2.28,1.92,2.13,2.55,2.32
+M&A,M&A,Business and strategic,2.31,2.66,2.26,2.54,2.6,2.77
+Man-made disaster,Man-made disaster,Environmental,1.87,2.43,1.66,2.49,2.13,2.68
+Natural catastrophe,Nat cat,Environmental,2.40,2.96,2.19,3.00,2.74,2.89
+Neglect of corporate social responsibility,CSR,Governance,1.77,2.32,1.79,2.52,2,2.43
+Non malicious loss of critical/customer data,Data loss,Technology,2.28,2.77,2.38,2.71,2.68,2.7
+Pandemic,Pandemic,Socioeconomic,1.71,2.37,1.73,2.34,1.7,2.57
+Political risk,Political,Socioeconomic,3.02,3.09,2.40,2.46,2.68,2.81
+Price of materials/commodities,Commodities,Financial,2.39,2.74,2.49,2.80,2.64,2.57
+Product defect/recall,Recall,Operational,1.67,1.89,1.75,2.05,1.87,2.13
+Social unrest,Social unrest,Socioeconomic,1.64,2.06,1.69,2.24,1.83,2.28
+Strikes/industrial relations,Strike,Operational,2.15,2.34,1.93,2.29,2.15,2.21
+Supply chain risk,Supply chain,Operational,2.47,2.79,2.25,2.67,2.77,2.7
+Targeted cyber attack (internal and external),Cyber,Technology,2.98,3.17,2.83,3.17,3.32,3.45
+"Terrorist	attack",Terrorism,Socioeconomic,2.17,2.96,1.93,3.05,2.28,2.98
+Theft/protection of IP,IP,Business and strategic,1.89,2.35,1.93,2.17,2.34,2.3
+Tightening and changing regulation,Regulation,Governance,2.68,2.87,2.73,2.76,3.41,2.91
+Water shortages,Water,Environmental,1.43,1.83,1.61,1.95,1.85,2.21
