@@ -1,0 +1,312 @@
+
+<html>
+  <head>
+    <style>
+    body {
+      background-color: white;
+      font-family: 'PT Serif', serif;
+      font-size: 20px;}
+
+    .highcharts-tooltip h3 {
+       margin: 0.3em 0;
+       }
+
+    table, th, td {
+        font-size: 12px;
+       }
+
+    th {
+        height: 30px;
+       }
+
+    table {
+        width: 160px;
+        text-align:center;
+       }
+
+    .aside-content {
+        margin:auto;
+        width: 800px;
+       }
+
+    p {
+      margin-left: 20px;
+      font-size: 18px;
+      }
+
+    #container1 {
+  padding-top: 40px;
+      }
+
+    a,b {
+    color: rgb(51,	51,	51);
+      }
+
+    a:hover {
+    color:  rgb(233, 42, 58);
+      }
+
+    h1 {
+      font-weight: 300;
+      color: darkslategray;
+      font-family: "PT Sans", sans-serif;
+      font-size: 56px;
+      margin-top: 10px;
+      margin-bottom: 0px;
+      }
+
+    h2 {
+      font-weight: 300;
+      color: darkslategray;
+      font-family: "PT Sans", sans-serif;
+      font-size: 32px;
+      margin-bottom: 20px;
+      margin-top: -10px;
+      }
+
+
+
+    </style>
+
+
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <title>Parisian Trees</title>
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+      <script src="https://code.highcharts.com/modules/exporting.js"></script>
+      <script src="https://code.highcharts.com/highcharts-more.js"></script>
+      <script src="https://code.highcharts.com/modules/variwide.js"></script>
+
+  </head>
+      <body>
+        <div class='aside-content'>
+      <h1>Trees in Paris</h1> 
+      <p>By Adrien SIEG</p>
+      <h2>Sizes of Parisian trees</h2>
+      <p>This is an interactive bar chart in which Parisian trees are both classified in keeping with their respective sizes and places. There are five categories of possibilities when it comes to sizes: [1] From 0m to 3m, [2] From 3m to 6m, [3] From 6m to 10m, [4] From 10m to 14m and finally [5] higher than 14m. For instance, 16,616 trees stand along in Paris' 16th Arrondissment of which 1,604 trees are from 0m to 3m high, 3,345 are from 3m to 6m high, 4,482 trees are from 6m to 10m high, 2,794 are from 10m to 14m high and finally 3,991 are higher than 14m.</p>
+      <p>Technically speaking, it is possible to play with parameters of the bar chart - by clicking on the height tab to keep away a given parameter. </p>
+          <div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+          <p ><b>Source: </b><a href="https://opendata.paris.fr/explore/?sort=modified"> Open Data Paris</a></p>
+          <br></br> 
+          <br></br>
+      <h2>Position of Parisian trees</h2>
+       <p>This is an interactive map in which each big point includes smaller ones till getting tree icons. In other words, our map takes the form of 'Russian doll', nested within each other. A tree icon accounts for the position of a given real tree. In Paris there are 201,684 trees spread out over twenty districts. The geographical distribution of trees in Paris is obvoiously skewed. For instance there are height times more trees in the 15th district than they are in the 3th district.</p>
+          <iframe src="https://opendata.paris.fr/explore/embed/dataset/les-arbres/map/?location=11,48.82696,2.34&static=false&datasetcard=false&scrollWheelZoom=false" width="1000" height="500" frameborder="0"></iframe>
+          <br></br>
+          <br></br>
+      <h2>House Prices in keeping with # Parisian trees</h2>
+      <p>When we consider house prices coming from <a href=”http://www.notaires.paris-idf.fr/outil/immobilier/prix-et-nombre-de-ventes-paris-idf”>Parisian lawyers</a> in order to compare with number of trees per district we can draw a major conclusion; The lower the number of trees, the higher house prices. From a top down approach, top 6 expensive districts in Paris are 6th, 7th, 4th, 1st, 5th, 2nd districts. Let's put into perspective house prices with number of trees in Paris. To do so, from a bottom up approach, top 7 of Parisian districts having the lowest number of trees are 2nd, 9th, 3rd, 1st, 6th, 5th, 4th. We notice that the number of trees is negatively correlated to house prices.</p>
+      <p>When it comes to bar plot, column widths are proportional to house prices.</p>
+          <div id="container2" style="height: 400px; min-width: 310px; max-width: 1000px; margin: 0 auto"></div>
+          <br></br>
+      <p>Visually speaking, we can plot house prices in keeping with number of trees in a different way.</p>
+          <div id="container1" style="height: 400px; min-width: 310px; max-width: 800px; margin: 0 auto"></div>
+          <p ><b>Source: </b><a href="https://opendata.paris.fr/explore/?sort=modified"> Open Data Paris</a></p>
+          <br></br>
+          <br></br>
+      <h2>Data</h2>
+      <p>Here is the dataset we used.</p>
+          <iframe src="https://opendata.paris.fr/explore/embed/dataset/les-arbres/table/?dataChart=eyJxdWVyaWVzIjpbeyJjb25maWciOnsiZGF0YXNldCI6Imxlcy1hcmJyZXMiLCJvcHRpb25zIjp7fX0sImNoYXJ0cyI6W3siYWxpZ25Nb250aCI6dHJ1ZSwidHlwZSI6ImNvbHVtbiIsImZ1bmMiOiJBVkciLCJ5QXhpcyI6ImlkYmFzZSIsInNjaWVudGlmaWNEaXNwbGF5Ijp0cnVlLCJjb2xvciI6IiMyNjM4OTIifV0sInhBeGlzIjoidHlwZWVtcGxhY2VtZW50IiwibWF4cG9pbnRzIjo1MCwic29ydCI6IiJ9XSwidGltZXNjYWxlIjoiIiwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D&static=false&datasetcard=false" width="900" height="300" frameborder="0"></iframe>
+      </div>
+      </body>
+
+<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Heights of Trees in Paris'
+        },
+
+        xAxis: {
+            categories: ['BOIS DE BOULOGNE','BOIS DE VINCENNES','HAUTS-DE-SEINE','PARIS 10E ARRDT','PARIS 11E ARRDT','PARIS 12E ARRDT','PARIS 13E ARRDT','PARIS 14E ARRDT','PARIS 15E ARRDT','PARIS 16E ARRDT','PARIS 17E ARRDT','PARIS 18E ARRDT','PARIS 19E ARRDT','PARIS 1ER ARRDT','PARIS 20E ARRDT','PARIS 2E ARRDT','PARIS 3E ARRDT','PARIS 4E ARRDT','PARIS 5E ARRDT','PARIS 6E ARRDT','PARIS 7E ARRDT','PARIS 8E ARRDT','PARIS 9E ARRDT','SEINE-SAINT-DENIS','VAL-DE-MARNE']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Numbers of trees in Paris'
+            }
+        },
+        legend: {
+            reversed: true
+        },
+        plotOptions: {
+            series: {
+                stacking: 'normal'
+            }
+        },
+        series: [{
+            name: '[from 0m - to 3m]',
+            data: [384,3510,4442,379,187,584,2083,858,5957,1604,2340,1250,3182,352,2824,56,41,101,121,31,234,332,158,6487,3848]
+        }, {
+            name: '[from 10m - to 14m]',
+            data: [601,1195,204,673,174,442,1741,1865,1707,2794,1664,1067,387,20,1634,124,174,31,336,241,1889,2018,280,895,147]
+        }, {
+            name: '[Heigher than 14m]',
+            data: [817,2776,204,740,1580,2145,2852,1765,1609,3991,1648,1845,4033,229,3394,91,246,788,822,629,2248,2034,237,1076,2017]
+        },{
+            name: '[from 3m - to 6m]',
+            data: [847,1705,321,524,1569,4456,4744,4015,2563,3345,2141,2591,2912,604,3787,124,301,702,459,364,1326,1121,203,1284,923]
+        },{
+            name: '[from 6m - to 10m]',
+            data: [1440,2322,188,1102,2199,4977,5366,3410,5380,4882,2965,3168,3183,461,3790,150,435,1106,685,513,3033,1786,305,1846,597]
+          }]
+    });
+});
+
+</script>
+
+<script type="text/javascript">
+
+$(function () {
+    $('#container1').highcharts({
+
+        chart: {
+            type: 'bubble',
+            plotBorderWidth: 1,
+            zoomType: 'xy'
+        },
+
+        legend: {
+            enabled: false
+        },
+
+        title: {
+            text: 'Number of trees in light of house prices'
+        },
+
+        xAxis: {
+            gridLineWidth: 1,
+            title: {
+                text: 'House prices per square'
+            },
+
+        },
+
+        yAxis: {
+            startOnTick: false,
+            endOnTick: false,
+            title: {
+                text: 'Number of trees'
+            },
+            maxPadding: 0.2,
+        },
+
+        tooltip: {
+                   useHTML: true,
+                   headerFormat: '<table>',
+                   pointFormat: '<tr><th colspan="2"><h3>{point.country}</h3></th></tr>' +
+                       '<tr><th>House prices per square:</th><td>{point.x}</td></tr>' +
+                       '<tr><th>Number of trees:</th><td>{point.y}</td></tr>',
+                   footerFormat: '</table>',
+                   followPointer: true
+               },
+
+        plotOptions: {
+            series: {
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}'
+                }
+            }
+        },
+
+        series: [{
+            data: [
+                { x: 8850, y: 3418, z:3418, name: '10', country:'PARIS 10E ARRDT'},
+                { x: 9190, y: 5709, z:5709, name: '11', country:'PARIS 11E ARRDT' },
+                { x: 8620,  y:12604,  z:12604, name:'12', country:'PARIS 12E ARRDT' },
+                { x: 8380,  y:16786, z:16786, name:'13', country:'PARIS 13E ARRDT'},
+                { x: 9430,  y:11913,  z:11913, name:'14', country:'PARIS 14E ARRDT'},
+                { x: 9140, y:17216, z:17216, name:'15', country:'PARIS 15E ARRDT'},
+                { x: 9820, y:16616, z:16616, name:'16', country:'PARIS 16E ARRDT'},
+                { x: 9400, y: 10758, z:10758, name: '17', country:'PARIS 17E ARRDT'},
+                { x: 8560, y: 9921, z:9921, name: '18', country:'PARIS 18E ARRDT' },
+                { x: 7630,  y:13697, z:13697, name:'19', country:'PARIS 19E ARRDT' },
+                { x: 11990,  y:1666, z:1666, name:'1', country:'PARIS 1E ARRDT'},
+                { x: 7890,  y:15429, z:15429, name:'20', country:'PARIS 20E ARRDT'},
+                { x: 11270, y:545, z:545, name:'2', country:'PARIS 2E ARRDT'},
+                { x: 11240, y:1197, z:1197, name:'3', country:'PARIS 3E ARRDT'},
+                { x: 12300,  y:2728, z:2728, name:'4', country:'PARIS 4E ARRDT'},
+                { x: 11330,  y:2423, z:2423, name:'5', country:'PARIS 5E ARRDT'},
+                { x: 12530, y:1778, z:1778, name:'6', country:'PARIS 6E ARRDT'},
+                { x: 12400, y:8730, z:8730, name:'7', country:'PARIS 7E ARRDT'},
+                { x: 9890,  y:7291, z:7291, name:'8', country:'PARIS 8E ARRDT'},
+                { x: 9910, y:1183, z:1183, name:'9', country:'PARIS 9E ARRDT'}
+            ]
+        }]
+
+    });
+});
+
+
+</script>
+
+<script type="text/javascript">
+$(function () {
+    $('#container2').highcharts({
+
+          chart: {
+        type: 'variwide'
+    },
+
+    title: {
+        text: '# Parisian trees in keeping with house prices'
+    },
+
+    xAxis: {
+        type: 'category',
+        title: {
+            text: 'Column widths are proportional to # trees'
+        }
+    },
+
+    legend: {
+        enabled: false
+    },
+
+    series: [{
+        name: 'Labor Costs',
+        data: [
+        ['PARIS 10E ARRDT',8850, 3418],
+        ['PARIS 11E ARRDT', 9190,5709],
+        ['PARIS 12E ARRDT', 8620,12604],
+        ['PARIS 13E ARRDT', 8380,16786],
+        ['PARIS 14E ARRDT', 9430,11913],
+        ['PARIS 15E ARRDT', 9140,17216],
+        ['PARIS 16E ARRDT', 9820,16616],
+        ['PARIS 17E ARRDT', 9400,10758],
+        ['PARIS 18E ARRDT', 8560,9921],
+        ['PARIS 19E ARRDT', 7630,13697],
+        ['PARIS 1ER ARRDT', 11990,1666],
+        ['PARIS 20E ARRDT',7890,15429],
+        ['PARIS 2E ARRDT',11270,545],
+        ['PARIS 3E ARRDT',11240,1197],
+        ['PARIS 4E ARRDT',12300,2728],
+        ['PARIS 5E ARRDT',11330,2423],
+        ['PARIS 6E ARRDT',12530,1778],
+        ['PARIS 7E ARRDT',12400,8730],
+        ['PARIS 8E ARRDT',9890,7291],
+        ['PARIS 9E ARRDT',9910,1183] 
+
+        ],
+        dataLabels: {
+            enabled: true,
+            format: '€{point.y:.0f}'
+        },
+        tooltip: {
+            pointFormat: 'Price per square: <b>€ {point.y}/m2</b><br>' +
+                '# trees per district: <b> {point.z} trees</b><br>'
+        },
+        colorByPoint: true
+    }]
+
+    });
+});
+</script>
+
+
+</html>
