@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ORAIA</title>
+  <link rel="icon" href="http://www.domain.com/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel='stylesheet' href='https://handsontable.com/dist/handsontable.full.css'>
+  <script type="text/javascript" src="http://visjs.org/dist/vis.js"></script>
+  <link href="http://visjs.org/dist/vis-network.min.css" rel="stylesheet" type="text/css"/>
+</head>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col">
+
+        <div class="tabs">
+          <input class="input" name="tabs" type="radio" id="tab-1" checked="checked"/>
+          <label class="label" for="tab-1">Explainer</label>
+          <div class="panel">
+            <h1>Inspect Black-Box Model</h1>
+              <p>The orange (specifically, the sweet orange) is the fruit of the citrus species Citrus × sinensis in the family Rutaceae</p>
+              <p>The fruit of the Citrus × sinensis is considered a sweet orange, whereas the fruit of the Citrus × aurantium is considered a bitter orange. The sweet orange reproduces asexually (apomixis through nucellar embryony); varieties of sweet orange arise through mutations.</p>
+
+              <div class="sublime-text">
+                <div class="screen">
+                  <div class="left-bar"></div>
+                  <div class="top-bar">
+                    <div class="buttons"></div>
+                  </div>
+                  <div class="code">
+                    <div class="row row1">
+                      <p class="green"></p> <p class="purple"></p>
+                    </div>
+                    <div class="row row2">
+                      <p class="blue"></p> <p class="yellow"></p> <p class="green"></p>
+                    </div>
+                    <div class="row row3">
+                      <p class="transparent"></p><p class="orange"></p> <p class="green"></p> <p class="purple"></p>
+                    </div>
+                    <div class="row row4">
+                      <p class="transparent"></p><p class="transparent"></p><p class="yellow"></p> <p class="blue"></p> <p class="green">
+                      </p>
+                    </div>
+                    <div class="row row5">
+                      <p class="transparent"></p><p class="transparent"></p><p class="purple"></p> <p class="orange"></p> <p class="yellow">
+                      </p>
+                    </div>
+                    <div class="row row6">
+                      <p class="transparent"></p><p class="green"></p> <p class="blue"></p> <p class="purple">
+                      </p>
+                    </div>
+                    <div class="row row7">
+                      <p class="transparent"></p><p class="yellow"></p> <p class="purple"></p> <p class="green">
+                      </p>
+                    </div>
+                    <div class="row row8">
+                      <p class="transparent"></p><p class="transparent"></p><p class="orange"></p> <p class="green"></p> <p class="purple">
+                      </p>
+                    </div>
+                    <div class="row row9">
+                      <p class="transparent"></p><p class="blue"></p> <p class="yellow"></p><p class="cursor"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+            <input class="input" name="tabs" type="radio" id="tab-2"/>
+            <label class="label" for="tab-2">Summarizer</label>
+          <div class="panel">
+            <h1>Summarize any news in few keywords</h1>
+              <p>The tangerine (Citrus tangerina) is an orange-colored citrus fruit that is closely related to, or possibly a type of, mandarin orange (Citrus reticulata).</p>
+              <p>The name was first used for fruit coming from Tangier, Morocco, described as a mandarin variety. Under the Tanaka classification system, Citrus tangerina is considered a separate species.</p>
+          </div>
+            <input class="input" name="tabs" type="radio" id="tab-3"/>
+            <label class="label" for="tab-3">Finder</label>
+          <div class="panel">
+            <h1>Compare with similar incidents</h1>
+            <p>A clementine (Citrus ×clementina) is a hybrid between a mandarin orange and a sweet orange, so named in 1902. The exterior is a deep orange colour with a smooth, glossy appearance. Clementines can be separated into 7 to 14 segments. Similarly to tangerines, they tend to be easy to peel.</p>
+          </div>
+            <input class="input" name="tabs" type="radio" id="tab-4"/>
+            <label class="label" for="tab-4">Learner</label>
+          <div class="panel">
+            <h1>Library of methods</h1>
+            <p>A clementine (Citrus ×clementina) is a hybrid between a mandarin orange and a sweet orange, so named in 1902. The exterior is a deep orange colour with a smooth, glossy appearance. Clementines can be separated into 7 to 14 segments. Similarly to tangerines, they tend to be easy to peel.</p>
+          </div>
+         </div>
+      </div>
+    </div>
+    <br/>
+    <br/>
+    <h1>Example: Let us consider an incident</h1>
+    <br/>
+    <br/>
+
+    <h1> >> Classification Task</h1>
+
+    <br/>
+
+    <div class="row">
+      <div clas="col">
+        <div class="box">
+          <!--<input type="text" placeholder="Please paste your incident to study" style="text-align: center; height:200px; width:800px;margin: 0 auto;">
+          <span></span>
+        </div> -->
+
+          <h2>ABN AMRO fined USD 1 million for segregation of customer funds and minimum net capital failings</h2>
+
+          <p1>On 18 June 2013 the US Commodity Futures Trading Commission (CFTC) fined ABN AMRO Clearing Chicago USD 1 million (EUR 748,000) for failing to segregate or secure sufficient customer funds, failing to meet the minimum net capital requirements, failing to maintain accurate books and records, and failing to supervise its employees.</p1>
+
+          <p1>Between 19 March 2009 and January 2012, ABN AMRO reported four instances in which it had failed to segregate sufficient funds to margin, guarantee, or secure customers’ trades or contracts. Each of these violations was the result of clerical errors and/or a lack of adequate policies and procedures related to the movement of customer funds. </p1>
+
+          <p1>In addition, ABN AMRO lacked adequate margin compliance procedures. During a routine audit of ABN AMRO’s books and records at the close of business on 31 May 2011, the CME Group, ABN AMRO’s designated self-regulatory organisation, found that ABN AMRO had improperly used a customer’s withdrawn warehouse receipts as collateral for margining purposes. Without these warehouse receipts, the customer’s accounts were under-margined on several occasions, and ABN AMRO had to reduce its adjusted net capital by an amount equal to the margin deficits. Once these reductions were calculated, it was determined that ABN AMRO had failed to meet the minimum net capital requirements at month-end for April 2011.Furthermore, the CFTC conducted a limited review of ABN AMRO beginning on 27 January 2012 and identified additional issues with ABN AMRO’s margining procedures. The primary deficiency noted was that ABN AMRO relied on a commonly used commercial accounting software program to calculate and generate its customer margin call listing. This particular software program is unable to calculate the correct amount of margin required for a very limited number of certain types of accounts (such as omnibus accounts that offset margin requirements for certain credit spread transactions). </p1>
+
+          <p1>Although margin calls were issued as necessary to the relevant accounts, ABN AMRO did not maintain a supplemental report or record of the margin requirements for these types of accounts. As a result, ABN AMRO was unable to produce a complete and accurate margin report listing for those accounts, thereby failing to keep accurate books and records sufficient to determine the margin status of each customer.\xa0The CFTC found that these violations were a result of a lack of adequate policies, procedures, and/or controls and, for the most part, were preventable, reflecting a lack of supervisory controls over the activities of its partners, employees, and agents. ABN AMRO failed to implement an adequate system of internal controls and procedures regarding customer movement of funds to ensure compliance with the segregation and foreign futures and foreign options secured amount requirements, failed to implement accounting procedures to reduce the likelihood of clerical errors and forecasting errors, failed to implement adequate procedures and training regarding exchange margin requirements, and failed to implement adequate policies and procedures to ensure an accurate and complete daily margin report. In addition to the fine, the CFTC ordered ABN AMRO to retain an independent consultant to review and evaluate the effectiveness of its existing internal controls, policies, procedures and risk management systems and to adopt any recommendations for improvement made by the consultant.'</p1>
+      </div>
+      </div>
+
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="row">
+      <div clas="col">
+        <div class=result>
+          <div class=fakeMenu>
+            <div class="fakeButtons fakeClose"></div>
+            <div class="fakeButtons fakeMinimize"></div>
+            <div class="fakeButtons fakeZoom"></div>
+        </div>
+          <div class="fakeScreen">
+            <p class="line1">&#91;&nbsp;&ldquo;Compliance: 66% &rdquo;,<span class="cursor1">_</span></p>
+            <p class="line2">&nbsp;&nbsp;&ldquo;Regulatory/Legal: 30%&rdquo;,<span class="cursor2">_</span></p>
+            <p class="line3">&nbsp;&nbsp;&ldquo;Model: 4%&rdquo;&nbsp;&#93;<span class="cursor3">_</span></p>
+            <p class="line4">><span class="cursor4">_</span></p>
+          </div>
+          </div>
+      </div>
+    </div>
+
+    <br/>
+    <br/>
+
+    <h1> >>Name Entity Recognition Task</h1>
+
+    <br/>
+
+    <div class="row">
+      <div clas="col">
+        <div class="box">
+          <!--<input type="text" placeholder="Please paste your incident to study" style="text-align: center; height:200px; width:800px;margin: 0 auto;">
+          <span></span>
+        </div> -->
+
+          <h2>ABN AMRO fined USD 1 million for segregation of customer funds and minimum net capital failings</h2>
+
+          <p2>On 18 June 2013 the US Commodity Futures Trading Commission (CFTC) fined ABN AMRO Clearing Chicago USD 1 million (EUR 748,000) for failing to segregate or secure sufficient customer funds, failing to meet the minimum net capital requirements, failing to maintain accurate books and records, and failing to supervise its employees.</p2>
+
+          <p2>Between 19 March 2009 and January 2012, ABN AMRO reported four instances in which it had failed to segregate sufficient funds to margin, guarantee, or secure customers’ trades or contracts. Each of these violations was the result of clerical errors and/or a lack of adequate policies and procedures related to the movement of customer funds. </p2>
+
+          <p2>In addition, ABN AMRO lacked adequate margin compliance procedures. During a routine audit of ABN AMRO’s books and records at the close of business on 31 May 2011, the CME Group, ABN AMRO’s designated self-regulatory organisation, found that ABN AMRO had improperly used a customer’s withdrawn warehouse receipts as collateral for margining purposes. Without these warehouse receipts, the customer’s accounts were under-margined on several occasions, and ABN AMRO had to reduce its adjusted net capital by an amount equal to the margin deficits. Once these reductions were calculated, it was determined that ABN AMRO had failed to meet the minimum net capital requirements at month-end for April 2011.Furthermore, the CFTC conducted a limited review of ABN AMRO beginning on 27 January 2012 and identified additional issues with ABN AMRO’s margining procedures. The primary deficiency noted was that ABN AMRO relied on a commonly used commercial accounting software program to calculate and generate its customer margin call listing. This particular software program is unable to calculate the correct amount of margin required for a very limited number of certain types of accounts (such as omnibus accounts that offset margin requirements for certain credit spread transactions). </p2>
+
+          <p2>Although margin calls were issued as necessary to the relevant accounts, ABN AMRO did not maintain a supplemental report or record of the margin requirements for these types of accounts. As a result, ABN AMRO was unable to produce a complete and accurate margin report listing for those accounts, thereby failing to keep accurate books and records sufficient to determine the margin status of each customer.The CFTC found that these violations were a result of a lack of adequate policies, procedures, and/or controls and, for the most part, were preventable, reflecting a lack of supervisory controls over the activities of its partners, employees, and agents. ABN AMRO failed to implement an adequate system of internal controls and procedures regarding customer movement of funds to ensure compliance with the segregation and foreign futures and foreign options secured amount requirements, failed to implement accounting procedures to reduce the likelihood of clerical errors and forecasting errors, failed to implement adequate procedures and training regarding exchange margin requirements, and failed to implement adequate policies and procedures to ensure an accurate and complete daily margin report. \xa0In addition to the fine, the CFTC ordered ABN AMRO to retain an independent consultant to review and evaluate the effectiveness of its existing internal controls, policies, procedures and risk management systems and to adopt any recommendations for improvement made by the consultant.'</p2>
+      </div>
+      </div>
+
+    </div>
+
+    <br/>
+    <br/>
+
+    <!---->
+    <div class="row">
+      <div clas="col">
+        <div id="grid" class="handsontale"></div>
+      </div>
+    </div><!---->
+
+    <br/>
+    <br/>
+
+    <h1> >> Summarizer Task</h1>
+
+    <br/>
+
+    <div class="row">
+      <div clas="col">
+       <h2><p2>Cutting humans in banking reduces risk says CEO.</p2></h2>
+
+      <span class="strikethrough">The man running the biggest Nordic bank says that</span> reducing the number of humans working in finance will actually help cut some of the risks in the industry. <span class="strikethrough">Casper von Koskull, the chief executive officer of Nordea Bank Abp, predicts that in roughly a decade, his </span> sector will have half as many people working in it as it does now. <span class="strikethrough">And that’s a </span> good thing, <span class="strikethrough">he said.</span><span class="strikethrough">With cuts on that scale, the finance industry “actually becomes more robust,” von Koskull said in an interview in Helsinki last month. </span> “You can reduce the operational risk.”<span class="strikethrough">“It’s not my intention to make bold predictions, but I genuinely believe that,” he said.</span>Nordea is in the middle of cutting 6,000 jobs in an effort to automate more functions. The idea is to cut costs and create a more manageable bank. <span class="strikethrough">The strategy has also involved a retreat from some markets that Nordea has defined as too risky, including a partial withdrawal from the Baltics and Russia.</span><span class="strikethrough">“If I would name one player which everyone in banking is looking at, it’s</span> Amazon<span class="strikethrough">,” he said. “That’s the </span> one that’s operating differently. The adjacency to banking is so much closer than for Google or Apple or Facebook.” The biggest opportunity to profit from using robotics, artificial intelligence and digitization is at the so-called front end, where the bank meets the customer, <span class="strikethrough">he said.</span> The areas where human contact is still key are services like helping customers with their mortgages and giving them advice on managing their wealth. But even there, technology can help, <span class="strikethrough">von Koskull said.</span>
+      </div>
+    </div>
+
+    <br/>
+    <br/>
+
+    <h1> >> Detection of Weak Signal Task </h1>
+
+    <div class="row">
+      <div clas="col">
+        <div id="mynetwork"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div clas="col">
+        <footer>
+          <p>
+            Imagined, Designed and Built by <a href="https://www.linkedin.com/in/adrien-sieg-75307491/" target="_blank" class="credit-link">Adrien SIEG</a> and <a href="https://www.linkedin.com/in/zied-hajyahia/" target="_blank" class="credit-link">Zied HAJ YAHIA</a> &copy;2019
+          </p>
+        </footer>
+      </div>
+    </div>
+
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/9487/jquery.highlight.js'></script>
+  <script src='https://handsontable.com/dist/handsontable.full.js'></script>
+  <script  src="js/index_riskair.js"></script>
+  <script  src="js/index_graph.js"></script>
+
+</body>
+
+</html>

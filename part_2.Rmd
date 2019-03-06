@@ -1,0 +1,141 @@
+---
+title: Network Graph Embeddings is all we need in natural language understanding *[Part
+  2]*
+author: "Adrien Sieg"
+output:
+  html_document:
+    highlight: haddock
+    theme: yeti
+    toc: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+  pdf_document:
+    toc: yes
+---
+
+<center>
+![](neo4j_base.gif)
+</center>
+
+**<font color="green">[A quick reminder regarding the final objectives]</font>**
+
+This paper brings to light how **network embedding graphs** can help to solve major open problems in natural language understanding. One illustrative element in NLP could be **language variability** - or **ambiguity problem** - which happens when two sentences express the same meaning (or ideas) with very different words. For instance we may say almost interchangeably: *<font color="blue">"where is the nearest sushi restaurant?"</font>* or *<font color="blue">"can you please give me addresses of sushi places nearby?"</font>*. These two sentences exactly share the same meaning with a different semantic wording. Here is the big challenge that we are struggling. In terms of data science, it bears witness of a well-known problem called **text similarity**. Indeed, my sparse vectors for the 2 sentences have no common words and consequently will have a cosine distance of 1. This is a terrible distance score because the 2 sentences have very similar meanings. 
+
+The first thing that is crossing any data scientists'mind would have been to use popular **document embedding methods** based on **similarity measures** such as **Doc2Vec**, **Average w2v vectors**, **Weighted average w2v vectors** (e.g. tf-idf), **RNN-based embeddings (e.g. deep LSTM networks)**, ... to cope with this text similarity challenge. 
+
+As for us, we will tackle this text similarity challenge by implementing **network graph embeddings** in light of **traditional word embeddings technics**. 
+
+**<font color="green">[In this part]</font>**
+
+This part aims at implementing a neo4j graph database. We currently have two pieces of information: 
+
+- We have news - written in English according many topics. This is a **text** format. Here is the <font color="blue">micro level</font>. To carry out our final objective, this is the most valuable piece of information. 
+
+- In addition, we have information regarding the context of news - when they are published, where they come from, from which category they fall down, who write them, ... Here is a <font color="blue">macro level</font>. 
+
+The objectives is to play with these two levels in order to classify news at best.
+
+```{r, include=FALSE}
+library(visNetwork)
+library(kableExtra)
+library(ggplot2)
+library(dplyr)
+library(tidytext)
+library(igraph)
+library(tidyr)
+library(ggraph)
+library(data.table)
+```
+
+```{r, include=FALSE}
+final_nodes <- readRDS("C:/Users/adsieg/Desktop/part_1/final_nodes_part_2.RDS")
+final_edges <- readRDS("C:/Users/adsieg/Desktop/part_1/final_edges_part_2.RDS")
+```
+
+# Creation of two graph databases
+
+## News in keeping with a context environment
+
+As explained in the previous part, we want to pool all news collected into a unique graph database. The underlying goal is to find some unseeable links in order to answer this set of questions? 
+
+- Is there a specific link between two news coming from the same category [sport, business, technology, ...] <font color="green">and</font> published at the same date - <font color="red">but</font> coming from different sources? If so, can we assess that these two given news under consideration are the same? i.e. are they ovelapped?
+
+- Is there a specific link between two news published at the same hour but related / fallen (in)to two different categories? Let's say a famous politician guy dies (but he is also a tennis enthusiast). Consequently, this piece of information should be related both in General Category (for the policitian part) as well as sport category (for the sport part)
+
+- There are plenty of possibilities
+
+Just to give you a first hint of what we pursue, let's consider an instance. To do so, we drew a sample of news (to finally get couples of news) and put them into perspectives according to their own features.
+
+```{r}
+visNetwork(final_nodes, final_edges)
+```
+
+As we can see, news (in <font color="green">green</font>) are linked together because they share in common some information such as category (in <font color="red">red</font>), a date (in <font color="blue">blue</font>) or a source (in <font color="yellow">yellow</font>). 
+
+Let's have a look at news ploted just above to see if we find concrete and relevant links
+
+```{r, include=FALSE}
+setwd("C:/Users/adsieg/Desktop/part_1")
+news_data<-fread("news.csv", sep = ",", header= TRUE, encoding = 'UTF-8')
+```
+
+```{r}
+kable(news_data[c(1:10),c(2,5,8)]) %>%
+  kable_styling(bootstrap_options = "striped", full_width = F)
+```
+The first answer that is crossing my mind is **YES** but it is pretty messy and not so obvious just because we took randomly a sample. If we want to find relevant and astonishing example, we must work on the whole dataset. 
+
+From now, we are getting down to business by considering all news and not a sample. In term of visualization, I obviously cannot display a graph network for 50K+ news ... but with neo4j and visNetwork.js we can. Here is the amazing result reported in a .gif. Let's have a close eye on it:
+
+
+
+
+<center>
+![](neo4j_base.gif)
+</center>
+
+
+## Words graph
+
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://adriensieg.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

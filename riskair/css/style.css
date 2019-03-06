@@ -1,0 +1,1026 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background: #efefef;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #333;
+}
+@media (min-width: 600px) {
+  body {
+    padding: 60px 10px;
+  }
+}
+h1 {
+  margin: 0;
+  font-family: 'Bree Serif', serif;
+  font-size: 36px;
+}
+p {
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  background: #e5e5e5;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+.input {
+  position: absolute;
+  opacity: 0;
+}
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+.label:hover {
+  background: #d8d8d8;
+}
+.label:active {
+  background: #ccc;
+}
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+.input:checked + .label + .panel {
+  display: block;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.sublime-text {
+  margin: 60px auto 50px auto;
+  width: 416px;
+  overflow: visible;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation: appear 500ms ease-out forwards;
+          animation: appear 500ms ease-out forwards;
+}
+.sublime-text .screen {
+  position: relative;
+  height: 234px;
+  background-color: #404041;
+  border-radius: 8px;
+  color: white;
+  font-size: 30px;
+}
+.sublime-text .screen .top-bar {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  margin-top: 0;
+  background-color: #E6E7E8;
+  border-radius: 7px 7px 0 0;
+}
+.sublime-text .screen .top-bar .buttons {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 12px;
+  background: #FF8F8F;
+  border-radius: 50%;
+  left: 22px;
+}
+.sublime-text .screen .top-bar .buttons:after, .sublime-text .screen .top-bar .buttons:before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.sublime-text .screen .top-bar .buttons:after {
+  left: 12px;
+  background-color: #5EC3AF;
+}
+.sublime-text .screen .top-bar .buttons:before {
+  left: -12px;
+  background-color: #ff2929;
+}
+.sublime-text .screen .left-bar {
+  height: 100%;
+  width: 30px;
+  position: absolute;
+  padding-left: 8px;
+  background-color: #2e2e2f;
+  border-radius: 10px 0 0 7px;
+}
+.sublime-text .screen .left-bar:after {
+  position: absolute;
+  top: 24px;
+  content: ". . . . . . . . . .";
+  color: #59595b;
+  font-size: 42px;
+  line-height: 20px;
+}
+.sublime-text .screen .code {
+  position: absolute;
+  margin: 0 0 0 30px;
+}
+.sublime-text .screen .code .row {
+  position: relative;
+  padding: 8px;
+  height: 20px;
+}
+.sublime-text .screen .code .row p {
+  opacity: 0;
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 8px;
+  background-color: white;
+  border-radius: 4px;
+}
+.sublime-text .screen .code .row p.green {
+  width: 75px;
+  background-color: #5EC3AF;
+}
+.sublime-text .screen .code .row p.orange {
+  width: 115px;
+  background-color: #FF8F8F;
+}
+.sublime-text .screen .code .row p.blue {
+  width: 95px;
+  background-color: #43C7F4;
+}
+.sublime-text .screen .code .row p.purple {
+  width: 38px;
+  background-color: #9E76B4;
+}
+.sublime-text .screen .code .row p.yellow {
+  width: 83px;
+  background-color: #FFCC4E;
+}
+.sublime-text .screen .code .row p.transparent {
+  background-color: transparent;
+  width: 30px;
+}
+.sublime-text .screen .code .row p.cursor {
+  border-radius: 0;
+  margin-left: 1px;
+  background-color: #E6E7E8;
+  width: 2px;
+  -webkit-animation: blink 1s ease 4.6s infinite;
+          animation: blink 1s ease 4.6s infinite;
+}
+
+/* sublime text */
+/* Input text animation */
+.row1 > p:nth-child(1) {
+  -webkit-animation: show-text 100ms ease 1100ms forwards;
+          animation: show-text 100ms ease 1100ms forwards;
+}
+
+.row1 > p:nth-child(2) {
+  -webkit-animation: show-text 100ms ease 1200ms forwards;
+          animation: show-text 100ms ease 1200ms forwards;
+}
+
+.row1 > p:nth-child(3) {
+  -webkit-animation: show-text 100ms ease 1300ms forwards;
+          animation: show-text 100ms ease 1300ms forwards;
+}
+
+.row1 > p:nth-child(4) {
+  -webkit-animation: show-text 100ms ease 1400ms forwards;
+          animation: show-text 100ms ease 1400ms forwards;
+}
+
+.row1 > p:nth-child(5) {
+  -webkit-animation: show-text 100ms ease 1500ms forwards;
+          animation: show-text 100ms ease 1500ms forwards;
+}
+
+.row1 > p:nth-child(6) {
+  -webkit-animation: show-text 100ms ease 1600ms forwards;
+          animation: show-text 100ms ease 1600ms forwards;
+}
+
+.row1 > p:nth-child(7) {
+  -webkit-animation: show-text 100ms ease 1700ms forwards;
+          animation: show-text 100ms ease 1700ms forwards;
+}
+
+.row1 > p:nth-child(8) {
+  -webkit-animation: show-text 100ms ease 1800ms forwards;
+          animation: show-text 100ms ease 1800ms forwards;
+}
+
+.row1 > p:nth-child(9) {
+  -webkit-animation: show-text 100ms ease 1900ms forwards;
+          animation: show-text 100ms ease 1900ms forwards;
+}
+
+.row2 > p:nth-child(1) {
+  -webkit-animation: show-text 100ms ease 1500ms forwards;
+          animation: show-text 100ms ease 1500ms forwards;
+}
+
+.row2 > p:nth-child(2) {
+  -webkit-animation: show-text 100ms ease 1600ms forwards;
+          animation: show-text 100ms ease 1600ms forwards;
+}
+
+.row2 > p:nth-child(3) {
+  -webkit-animation: show-text 100ms ease 1700ms forwards;
+          animation: show-text 100ms ease 1700ms forwards;
+}
+
+.row2 > p:nth-child(4) {
+  -webkit-animation: show-text 100ms ease 1800ms forwards;
+          animation: show-text 100ms ease 1800ms forwards;
+}
+
+.row2 > p:nth-child(5) {
+  -webkit-animation: show-text 100ms ease 1900ms forwards;
+          animation: show-text 100ms ease 1900ms forwards;
+}
+
+.row2 > p:nth-child(6) {
+  -webkit-animation: show-text 100ms ease 2000ms forwards;
+          animation: show-text 100ms ease 2000ms forwards;
+}
+
+.row2 > p:nth-child(7) {
+  -webkit-animation: show-text 100ms ease 2100ms forwards;
+          animation: show-text 100ms ease 2100ms forwards;
+}
+
+.row2 > p:nth-child(8) {
+  -webkit-animation: show-text 100ms ease 2200ms forwards;
+          animation: show-text 100ms ease 2200ms forwards;
+}
+
+.row2 > p:nth-child(9) {
+  -webkit-animation: show-text 100ms ease 2300ms forwards;
+          animation: show-text 100ms ease 2300ms forwards;
+}
+
+.row3 > p:nth-child(1) {
+  -webkit-animation: show-text 100ms ease 1900ms forwards;
+          animation: show-text 100ms ease 1900ms forwards;
+}
+
+.row3 > p:nth-child(2) {
+  -webkit-animation: show-text 100ms ease 2000ms forwards;
+          animation: show-text 100ms ease 2000ms forwards;
+}
+
+.row3 > p:nth-child(3) {
+  -webkit-animation: show-text 100ms ease 2100ms forwards;
+          animation: show-text 100ms ease 2100ms forwards;
+}
+
+.row3 > p:nth-child(4) {
+  -webkit-animation: show-text 100ms ease 2200ms forwards;
+          animation: show-text 100ms ease 2200ms forwards;
+}
+
+.row3 > p:nth-child(5) {
+  -webkit-animation: show-text 100ms ease 2300ms forwards;
+          animation: show-text 100ms ease 2300ms forwards;
+}
+
+.row3 > p:nth-child(6) {
+  -webkit-animation: show-text 100ms ease 2400ms forwards;
+          animation: show-text 100ms ease 2400ms forwards;
+}
+
+.row3 > p:nth-child(7) {
+  -webkit-animation: show-text 100ms ease 2500ms forwards;
+          animation: show-text 100ms ease 2500ms forwards;
+}
+
+.row3 > p:nth-child(8) {
+  -webkit-animation: show-text 100ms ease 2600ms forwards;
+          animation: show-text 100ms ease 2600ms forwards;
+}
+
+.row3 > p:nth-child(9) {
+  -webkit-animation: show-text 100ms ease 2700ms forwards;
+          animation: show-text 100ms ease 2700ms forwards;
+}
+
+.row4 > p:nth-child(1) {
+  -webkit-animation: show-text 100ms ease 2300ms forwards;
+          animation: show-text 100ms ease 2300ms forwards;
+}
+
+.row4 > p:nth-child(2) {
+  -webkit-animation: show-text 100ms ease 2400ms forwards;
+          animation: show-text 100ms ease 2400ms forwards;
+}
+
+.row4 > p:nth-child(3) {
+  -webkit-animation: show-text 100ms ease 2500ms forwards;
+          animation: show-text 100ms ease 2500ms forwards;
+}
+
+.row4 > p:nth-child(4) {
+  -webkit-animation: show-text 100ms ease 2600ms forwards;
+          animation: show-text 100ms ease 2600ms forwards;
+}
+
+.row4 > p:nth-child(5) {
+  -webkit-animation: show-text 100ms ease 2700ms forwards;
+          animation: show-text 100ms ease 2700ms forwards;
+}
+
+.row4 > p:nth-child(6) {
+  -webkit-animation: show-text 100ms ease 2800ms forwards;
+          animation: show-text 100ms ease 2800ms forwards;
+}
+
+.row4 > p:nth-child(7) {
+  -webkit-animation: show-text 100ms ease 2900ms forwards;
+          animation: show-text 100ms ease 2900ms forwards;
+}
+
+.row4 > p:nth-child(8) {
+  -webkit-animation: show-text 100ms ease 3000ms forwards;
+          animation: show-text 100ms ease 3000ms forwards;
+}
+
+.row4 > p:nth-child(9) {
+  -webkit-animation: show-text 100ms ease 3100ms forwards;
+          animation: show-text 100ms ease 3100ms forwards;
+}
+
+.row5 > p:nth-child(1) {
+  -webkit-animation: show-text 100ms ease 2700ms forwards;
+          animation: show-text 100ms ease 2700ms forwards;
+}
+
+.row5 > p:nth-child(2) {
+  -webkit-animation: show-text 100ms ease 2800ms forwards;
+          animation: show-text 100ms ease 2800ms forwards;
+}
+
+.row5 > p:nth-child(3) {
+  -webkit-animation: show-text 100ms ease 2900ms forwards;
+          animation: show-text 100ms ease 2900ms forwards;
+}
+
+.row5 > p:nth-child(4) {
+  -webkit-animation: show-text 100ms ease 3000ms forwards;
+          animation: show-text 100ms ease 3000ms forwards;
+}
+
+.row5 > p:nth-child(5) {
+  -webkit-animation: show-text 100ms ease 3100ms forwards;
+          animation: show-text 100ms ease 3100ms forwards;
+}
+
+.row5 > p:nth-child(6) {
+  -webkit-animation: show-text 100ms ease 3200ms forwards;
+          animation: show-text 100ms ease 3200ms forwards;
+}
+
+.row5 > p:nth-child(7) {
+  -webkit-animation: show-text 100ms ease 3300ms forwards;
+          animation: show-text 100ms ease 3300ms forwards;
+}
+
+.row5 > p:nth-child(8) {
+  -webkit-animation: show-text 100ms ease 3400ms forwards;
+          animation: show-text 100ms ease 3400ms forwards;
+}
+
+.row5 > p:nth-child(9) {
+  -webkit-animation: show-text 100ms ease 3500ms forwards;
+          animation: show-text 100ms ease 3500ms forwards;
+}
+
+.row6 > p:nth-child(1) {
+  -webkit-animation: show-text 100ms ease 3100ms forwards;
+          animation: show-text 100ms ease 3100ms forwards;
+}
+
+.row6 > p:nth-child(2) {
+  -webkit-animation: show-text 100ms ease 3200ms forwards;
+          animation: show-text 100ms ease 3200ms forwards;
+}
+
+.row6 > p:nth-child(3) {
+  -webkit-animation: show-text 100ms ease 3300ms forwards;
+          animation: show-text 100ms ease 3300ms forwards;
+}
+
+.row6 > p:nth-child(4) {
+  -webkit-animation: show-text 100ms ease 3400ms forwards;
+          animation: show-text 100ms ease 3400ms forwards;
+}
+
+.row6 > p:nth-child(5) {
+  -webkit-animation: show-text 100ms ease 3500ms forwards;
+          animation: show-text 100ms ease 3500ms forwards;
+}
+
+.row6 > p:nth-child(6) {
+  -webkit-animation: show-text 100ms ease 3600ms forwards;
+          animation: show-text 100ms ease 3600ms forwards;
+}
+
+.row6 > p:nth-child(7) {
+  -webkit-animation: show-text 100ms ease 3700ms forwards;
+          animation: show-text 100ms ease 3700ms forwards;
+}
+
+.row6 > p:nth-child(8) {
+  -webkit-animation: show-text 100ms ease 3800ms forwards;
+          animation: show-text 100ms ease 3800ms forwards;
+}
+
+.row6 > p:nth-child(9) {
+  -webkit-animation: show-text 100ms ease 3900ms forwards;
+          animation: show-text 100ms ease 3900ms forwards;
+}
+
+.row7 > p:nth-child(1) {
+  -webkit-animation: show-text 100ms ease 3500ms forwards;
+          animation: show-text 100ms ease 3500ms forwards;
+}
+
+.row7 > p:nth-child(2) {
+  -webkit-animation: show-text 100ms ease 3600ms forwards;
+          animation: show-text 100ms ease 3600ms forwards;
+}
+
+.row7 > p:nth-child(3) {
+  -webkit-animation: show-text 100ms ease 3700ms forwards;
+          animation: show-text 100ms ease 3700ms forwards;
+}
+
+.row7 > p:nth-child(4) {
+  -webkit-animation: show-text 100ms ease 3800ms forwards;
+          animation: show-text 100ms ease 3800ms forwards;
+}
+
+.row7 > p:nth-child(5) {
+  -webkit-animation: show-text 100ms ease 3900ms forwards;
+          animation: show-text 100ms ease 3900ms forwards;
+}
+
+.row7 > p:nth-child(6) {
+  -webkit-animation: show-text 100ms ease 4000ms forwards;
+          animation: show-text 100ms ease 4000ms forwards;
+}
+
+.row7 > p:nth-child(7) {
+  -webkit-animation: show-text 100ms ease 4100ms forwards;
+          animation: show-text 100ms ease 4100ms forwards;
+}
+
+.row7 > p:nth-child(8) {
+  -webkit-animation: show-text 100ms ease 4200ms forwards;
+          animation: show-text 100ms ease 4200ms forwards;
+}
+
+.row7 > p:nth-child(9) {
+  -webkit-animation: show-text 100ms ease 4300ms forwards;
+          animation: show-text 100ms ease 4300ms forwards;
+}
+
+.row8 > p:nth-child(1) {
+  -webkit-animation: show-text 100ms ease 3900ms forwards;
+          animation: show-text 100ms ease 3900ms forwards;
+}
+
+.row8 > p:nth-child(2) {
+  -webkit-animation: show-text 100ms ease 4000ms forwards;
+          animation: show-text 100ms ease 4000ms forwards;
+}
+
+.row8 > p:nth-child(3) {
+  -webkit-animation: show-text 100ms ease 4100ms forwards;
+          animation: show-text 100ms ease 4100ms forwards;
+}
+
+.row8 > p:nth-child(4) {
+  -webkit-animation: show-text 100ms ease 4200ms forwards;
+          animation: show-text 100ms ease 4200ms forwards;
+}
+
+.row8 > p:nth-child(5) {
+  -webkit-animation: show-text 100ms ease 4300ms forwards;
+          animation: show-text 100ms ease 4300ms forwards;
+}
+
+.row8 > p:nth-child(6) {
+  -webkit-animation: show-text 100ms ease 4400ms forwards;
+          animation: show-text 100ms ease 4400ms forwards;
+}
+
+.row8 > p:nth-child(7) {
+  -webkit-animation: show-text 100ms ease 4500ms forwards;
+          animation: show-text 100ms ease 4500ms forwards;
+}
+
+.row8 > p:nth-child(8) {
+  -webkit-animation: show-text 100ms ease 4600ms forwards;
+          animation: show-text 100ms ease 4600ms forwards;
+}
+
+.row8 > p:nth-child(9) {
+  -webkit-animation: show-text 100ms ease 4700ms forwards;
+          animation: show-text 100ms ease 4700ms forwards;
+}
+
+.row9 > p:nth-child(1) {
+  -webkit-animation: show-text 100ms ease 4300ms forwards;
+          animation: show-text 100ms ease 4300ms forwards;
+}
+
+.row9 > p:nth-child(2) {
+  -webkit-animation: show-text 100ms ease 4400ms forwards;
+          animation: show-text 100ms ease 4400ms forwards;
+}
+
+.row9 > p:nth-child(3) {
+  -webkit-animation: show-text 100ms ease 4500ms forwards;
+          animation: show-text 100ms ease 4500ms forwards;
+}
+
+.row9 > p:nth-child(4) {
+  -webkit-animation: show-text 100ms ease 4600ms forwards;
+          animation: show-text 100ms ease 4600ms forwards;
+}
+
+.row9 > p:nth-child(5) {
+  -webkit-animation: show-text 100ms ease 4700ms forwards;
+          animation: show-text 100ms ease 4700ms forwards;
+}
+
+.row9 > p:nth-child(6) {
+  -webkit-animation: show-text 100ms ease 4800ms forwards;
+          animation: show-text 100ms ease 4800ms forwards;
+}
+
+.row9 > p:nth-child(7) {
+  -webkit-animation: show-text 100ms ease 4900ms forwards;
+          animation: show-text 100ms ease 4900ms forwards;
+}
+
+.row9 > p:nth-child(8) {
+  -webkit-animation: show-text 100ms ease 5000ms forwards;
+          animation: show-text 100ms ease 5000ms forwards;
+}
+
+.row9 > p:nth-child(9) {
+  -webkit-animation: show-text 100ms ease 5100ms forwards;
+          animation: show-text 100ms ease 5100ms forwards;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes show-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes show-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  75% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes appear {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  75% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+p {
+}
+
+.category_1_positif {
+  background-color: #e6ffe6;
+}
+
+.category_2_positif {
+  background-color: #b3ffb3;
+}
+
+.category_3_positif {
+  background-color: #80ff80;
+}
+
+.category_4_positif {
+  background-color: #4dff4d;
+}
+
+.category_5_positif {
+  background-color: #00ff00;
+}
+
+.category_1_negatif {
+  background-color: #ffe6e6;
+}
+
+.category_2_negatif {
+  background-color: #ffb3b3;
+}
+
+.category_3_negatif {
+  background-color: #ff8080;
+}
+
+.category_4_negatif {
+  background-color: #ff4d4d;
+}
+
+.category_5_negatif {
+  background-color: #ff1a1a;
+}
+
+.figures {
+  background-color: #00ff00;
+}
+
+.dates {
+  background-color: #4dc3ff;
+}
+
+.entities {
+  background-color: #ffff00;
+}
+
+
+.result {
+}
+
+.result .fakeButtons {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  position: relative;
+  top: 6px;
+  left: 6px;
+  background-color: #ff3b47;
+  border-color: #9d252b;
+  display: inline-block;
+}
+
+.result .fakeMinimize {
+  left: 11px;
+  background-color: #ffc100;
+  border-color: #9d802c;
+}
+
+.result .fakeZoom {
+  left: 16px;
+  background-color: #00d742;
+  border-color: #049931;
+}
+
+.result .fakeMenu {
+  width: 350px;
+  box-sizing: border-box;
+  height: 25px;
+  background-color: #bbb;
+  margin: 0 auto;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.result .fakeScreen {
+  background-color: #151515;
+  box-sizing: border-box;
+  width: 350px;
+  margin: 0 auto;
+  padding: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.result p {
+  position: relative;
+  left: 50%;
+  margin-left: -8.5em;
+  text-align: left;
+  font-size: 1.25em;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+.result span {
+  color: #fff;
+  font-weight: bold;
+}
+
+.result .line1 {
+  color: #9CD9F0;
+  -webkit-animation: type .5s 1s steps(20, end) forwards;
+  -moz-animation: type .5s 1s steps(20, end) forwards;
+  -o-animation: type .5s 1s steps(20, end) forwards;
+  animation: type .5s 1s steps(20, end) forwards;
+}
+
+.result .cursor1 {
+  -webkit-animation: blink 1s 2s 2 forwards;
+  -moz-animation: blink 1s 2s 2 forwards;
+  -o-animation: blink 1s 2s 2 forwards;
+  animation: blink 1s 2s 2 forwards;
+}
+
+.result .line2 {
+  color: #CDEE69;
+  -webkit-animation: type .5s 4.25s steps(20, end) forwards;
+  -moz-animation: type .5s 4.25s steps(20, end) forwards;
+  -o-animation: type .5s 4.25s steps(20, end) forwards;
+  animation: type .5s 4.25s steps(20, end) forwards;
+}
+
+.result .cursor2 {
+  -webkit-animation: blink 1s 5.25s 2 forwards;
+  -moz-animation: blink 1s 5.25s 2 forwards;
+  -o-animation: blink 1s 5.25s 2 forwards;
+  animation: blink 1s 5.25s 2 forwards;
+}
+
+.result .line3 {
+  color: #E09690;
+  -webkit-animation: type .5s 7.5s steps(20, end) forwards;
+  -moz-animation: type .5s 7.5s steps(20, end) forwards;
+  -o-animation: type .5s 7.5s steps(20, end) forwards;
+  animation: type .5s 7.5s steps(20, end) forwards;
+}
+
+.result .cursor3 {
+  -webkit-animation: blink 1s 8.5s 2 forwards;
+  -moz-animation: blink 1s 8.5s 2 forwards;
+  -o-animation: blink 1s 8.5s 2 forwards;
+  animation: blink 1s 8.5s 2 forwards;
+}
+
+.result .line4 {
+  color: #fff;
+  -webkit-animation: type .5s 10.75s steps(20, end) forwards;
+  -moz-animation: type .5s 10.75s steps(20, end) forwards;
+  -o-animation: type .5s 10.75s steps(20, end) forwards;
+  animation: type .5s 10.75s steps(20, end) forwards;
+}
+
+.result .cursor4 {
+  -webkit-animation: blink 1s 11.5s infinite;
+  -moz-animation: blink 1s 8.5s infinite;
+  -o-animation: blink 1s 8.5s infinite;
+  animation: blink 1s 8.5s infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes type {
+  to {
+    width: 17em;
+  }
+}
+
+@-moz-keyframes type {
+  to {
+    width: 17em;
+  }
+}
+
+@-o-keyframes type {
+  to {
+    width: 17em;
+  }
+}
+
+@keyframes type {
+  to {
+    width: 17em;
+  }
+}
+
+.strikethrough {
+  display: inline-block;
+  position: relative;
+  transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
+}
+
+.strikethrough:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  box-shadow: 0 1px rgba(255,255,255,0.6);
+  margin-top: -0.7em;
+  background: black;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+  -webkit-animation: strikethrough 1s 0.5s cubic-bezier(.55, 0, .1, 1) 1;
+          animation: strikethrough 1s 0.5s cubic-bezier(.55, 0, .1, 1) 1;
+  transition: -webkit-transform 0.5s cubic-bezier(.55, 0, .1, 1);
+  transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+  transition: transform 0.5s cubic-bezier(.55, 0, .1, 1), -webkit-transform 0.5s cubic-bezier(.55, 0, .1, 1);
+}
+
+
+/* Little hover effect */
+
+.strikethrough:hover {
+  color: rgba(200,0,0,1);
+  background: rgba(255, 189, 182, 0.3);
+}
+
+.strikethrough:hover:after {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+}
+
+
+
+
+/* Keyframes for initial animation */
+
+@-webkit-keyframes strikethrough {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes strikethrough {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+#mynetwork {
+    width: 800px;
+    height: 600px;
+}
+
